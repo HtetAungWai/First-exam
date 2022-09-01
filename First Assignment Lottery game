@@ -1,0 +1,65 @@
+#include<stdio.h>
+#include<stdlib.h>
+int lno=0,amount=0,c=0,age=0,id=0,d=0,quit=0;
+int lotteryno(int a,int b);
+void welcome();
+int main() {
+    printf("Welcome to the 1xbet lottery game\n");
+welcome();
+    do{printf("Please enter your age:\n");
+    scanf("%d",&age);
+    if (age > 17) {
+        while(d<3){
+        printf("Please enter your id\n");
+        scanf("%d",&id);
+        switch(id) {
+            case 123:
+                for (c = 1; c <= 3; c++) {
+                    printf("You have %d chance left\n This is your %d chance\n", 4 - c, c);
+                    printf("Please enter your amount\n");
+                    scanf("%d", &amount);
+                    printf("Please enter your lottery no:\n");
+                    scanf("%d", &lno);
+                    lotteryno(lno, amount);
+                }printf("if you want to play again press 1\n");
+                scanf("%d",&quit);
+                if(quit!=1){
+                exit (0);}
+                else{
+                    printf("You can play again now \n");
+                }
+                break;
+
+            default:
+                printf("Wrong id.Try again.\n");
+                break;
+        }
+
+
+    }
+    }
+else{
+        printf("You are not old enough for this game\n");
+    }}while(age<18);
+    return 0;
+}
+int lotteryno(int a,int b){
+    switch(a){
+        case 777:
+            printf("Congratualtions you won the lottery\n");
+            b=b*2 ;
+            printf("You won %d\n",b);
+            break;
+        case 888:
+            printf("Congratulations you won the lottery\n");
+            b=b*4;
+            printf("You won %d\n",b);
+            break;
+        default:
+            printf("Try again\n");
+            break;
+
+}return a,b;
+}void welcome(){
+    printf("Good luck!!!!\n");
+}
